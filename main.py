@@ -10,12 +10,16 @@ balls = []
 for i in range(250):
     balls.append(Ball(screen, (0,0),(0,0)))
     balls[i].random(size)
-
+pygame.key.set_repeat(80)
 running = True
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        if event.type == pygame.KEYDOWN:
+            if event.unicode == "b":
+                for ball in balls:
+                    ball.burst(size)
     screen.fill((0,0,0))
     for ball in balls:
         ball.update(size)

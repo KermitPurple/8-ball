@@ -28,7 +28,17 @@ class Ball:
             self.vel = (self.vel[0], self.vel[1] + self.friction)
 
     def random(self, size):
+        self.randompos(size)
+        self.randomvel()
+
+    def burst(self, size):
+        self.pos = (size[0]/2, size[1]/2)
+        self.randomvel()
+
+    def randompos(self, size):
         self.pos = (random.randrange(self.r,size[0]-self.r), random.randrange(self.r,size[1]-self.r))
+
+    def randomvel(self):
         self.vel = (random.random() * random.randint(1,2) * random.choice([-1,1]), random.random() * random.randint(1,2) * random.choice([-1,1]))
 
     def draw(self):
