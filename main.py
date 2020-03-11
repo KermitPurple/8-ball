@@ -20,6 +20,9 @@ while running:
             if event.unicode == "b":
                 for ball in balls:
                     ball.burst(size)
+            elif event.unicode == "r":
+                for ball in balls:
+                    ball.random(size)
     screen.fill((0,0,0))
     for ball in balls:
         ball.update(size)
