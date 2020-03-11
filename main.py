@@ -6,7 +6,7 @@ os.environ["SDL_VIDEO_WINDOW_POS"] = "15,30"
 pygame.display.init()
 size = (900,600)
 screen = pygame.display.set_mode(size)
-ball = Ball(screen, (size[0]/2, size[1]/2),(0.5,0.5))
+ball = Ball(screen, (size[0]/2, size[1]/2),(1.5,1.5))
 
 running = True
 while running:
