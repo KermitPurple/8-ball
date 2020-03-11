@@ -8,9 +8,9 @@ class Ball:
         self.r = 10
 
     def collide(self, size):
-        if self.pos[0] < 0 or self.pos[0] > size[0]:
+        if self.pos[0] - self.r < 0 or self.pos[0] + self.r > size[0]:
             self.vel = (-self.vel[0], self.vel[1])
-        elif self.pos[1] < 0 or self.pos[1] > size[1]:
+        elif self.pos[1] - self.r < 0 or self.pos[1] + self.r > size[1]:
             self.vel = (self.vel[0], -self.vel[1])
     
     def update(self, size):
