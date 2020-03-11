@@ -6,7 +6,10 @@ os.environ["SDL_VIDEO_WINDOW_POS"] = "15,30"
 pygame.display.init()
 size = (900,600)
 screen = pygame.display.set_mode(size)
-ball = Ball(screen, (size[0]/2, size[1]/2),(1.5,1.5))
+balls = []
+for i in range(10):
+    balls.append(Ball(screen, (0,0),(0,0)))
+    balls[i].random(size)
 
 running = True
 while running:
@@ -14,6 +17,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     screen.fill((0,0,0))
-    ball.update(size)
-    ball.draw()
+    for ball in balls:
+        ball.update(size)
+        ball.draw()
     pygame.display.update()
