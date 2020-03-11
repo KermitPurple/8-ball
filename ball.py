@@ -33,4 +33,6 @@ class Ball:
 
     def draw(self):
         p = (int(self.pos[0]),int(self.pos[1]))
-        pygame.draw.circle(self.screen, (255,255,255), p, self.r)
+        color = pygame.Color(255,255,255)
+        color.hsva = ((self.pos[0]+self.pos[1])%360, 100, 100)
+        pygame.draw.circle(self.screen, color, p, self.r)

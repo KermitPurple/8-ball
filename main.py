@@ -7,7 +7,7 @@ pygame.display.init()
 size = (900,600)
 screen = pygame.display.set_mode(size)
 balls = []
-for i in range(10):
+for i in range(250):
     balls.append(Ball(screen, (0,0),(0,0)))
     balls[i].random(size)
 
