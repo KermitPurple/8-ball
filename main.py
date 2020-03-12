@@ -4,7 +4,15 @@ from ball import Ball
 os.environ["SDL_VIDEO_WINDOW_POS"] = "15,30"
 
 def printcontrols():
-    pass
+    print("=" * 50)
+    print("CONTROLS:")
+    print("b - Burst")
+    print("r - Random")
+    print("1 - Color: Rainbow 1")
+    print("2 - Color: Rainbow 2")
+    print("3 - Color: Magenta")
+    print("4 - Color: Bi pride")
+    print("=" * 50)
 
 def main():
     printcontrols()
