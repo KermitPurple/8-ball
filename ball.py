@@ -41,8 +41,11 @@ class Ball:
     def randomvel(self):
         self.vel = (random.random() * random.randint(1,2) * random.choice([-1,1]), random.random() * random.randint(1,2) * random.choice([-1,1]))
 
-    def draw(self):
+    def draw(self, colorscheme):
         p = (int(self.pos[0]),int(self.pos[1]))
         color = pygame.Color(255,255,255)
-        color.hsva = ((self.pos[0]+self.pos[1])%360, 100, 100)
+        if colorscheme == 1:
+            color.hsva = ((self.pos[0]+self.pos[1])%360, 100, 100)
+        else: # default
+            color.hsva = ((self.pos[0]+self.pos[1])%360, 100, 100)
         pygame.draw.circle(self.screen, color, p, self.r)
