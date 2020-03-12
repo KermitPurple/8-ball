@@ -13,6 +13,7 @@ def printcontrols():
     print("3 - Color: Magenta")
     print("4 - Color: Bi pride")
     print("5 - Color: Cyan")
+    print("6 - Color: Seizure")
     print("=" * 50)
 
 def main():

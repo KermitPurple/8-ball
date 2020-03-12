@@ -56,6 +56,8 @@ class Ball:
             color = pygame.Color(abs(x - y)%255, 0, (x + y)%255)
         elif colorscheme == 5:
             color = pygame.Color(0, (x + y)%255, (x + y)%255)
+        elif colorscheme == 6: 
+            color.hsva = ((x * y)%360, 100, 100)
         else: # default
             color.hsva = ((x + y)%360, 100, 100)
         pygame.draw.circle(self.screen, color, p, self.r)
