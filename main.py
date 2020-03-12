@@ -13,10 +13,10 @@ def main():
     screen = pygame.display.set_mode(size)
     colorscheme = 1
     balls = []
-    for i in range(2):
+    for i in range(250):
         balls.append(Ball(screen, (0,0),(0,0)))
         balls[i].random(size)
-    pygame.key.set_repeat(80)
+    pygame.key.set_repeat(30)
     running = True
     while running:
         for event in pygame.event.get():
@@ -32,11 +32,13 @@ def main():
                 elif event.unicode >= "1" and event.unicode <= "9":
                     colorscheme = int(event.unicode)
                 elif event.unicode == '-':
-                    if len(balls) > 0:
-                        _ = balls.pop(-1)
+                    for _ in range(10):
+                        if len(balls) > 0:
+                            _ = balls.pop(-1)
                 elif event.unicode == '+':
-                    balls.append(Ball(screen,(0,0), (0,0)))
-                    balls[-1].random(size)
+                    for _ in range(10):
+                        balls.append(Ball(screen,(0,0), (0,0)))
+                        balls[-1].random(size)
         screen.fill((0,0,0))
         for ball in balls:
             ball.update(size)
