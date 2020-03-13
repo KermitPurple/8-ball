@@ -10,10 +10,11 @@ def printcontrols():
     print("r - Random")
     print("1 - Color: Rainbow 1")
     print("2 - Color: Rainbow 2")
-    print("3 - Color: Magenta")
-    print("4 - Color: Bi pride")
-    print("5 - Color: Cyan")
-    print("6 - Color: Seizure")
+    print("3 - Color: Rainbow 3")
+    print("4 - Color: Magenta")
+    print("5 - Color: Bi pride")
+    print("6 - Color: Cyan")
+    print("7 - Color: Seizure")
     print("=" * 50)
 
 def main():

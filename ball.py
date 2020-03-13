@@ -51,12 +51,14 @@ class Ball:
         elif colorscheme == 2: 
             color.hsva = ((x - y)%360, 100, 100)
         elif colorscheme == 3:
-            color = pygame.Color(abs(x - y)%255, 0, abs(y - x)%255)
+            color.hsva = (((x + y)*2)%360, 100, 100)
         elif colorscheme == 4:
-            color = pygame.Color(abs(x - y)%255, 0, (x + y)%255)
+            color = pygame.Color(abs(x - y)%255, 0, abs(y - x)%255)
         elif colorscheme == 5:
+            color = pygame.Color(abs(x - y)%255, 0, (x + y)%255)
+        elif colorscheme == 6:
             color = pygame.Color(0, (x + y)%255, (x + y)%255)
-        elif colorscheme == 6: 
+        elif colorscheme == 7: 
             color.hsva = ((x * y)%360, 100, 100)
         else: # default
             color.hsva = ((x + y)%360, 100, 100)
